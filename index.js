@@ -1,8 +1,11 @@
 const listeTache = document.getElementById("taches")
 listeTache.style.listStyle = "none" 
 let taches = []
-for (let i = 1 ; i <= window.localStorage.length ;i++ ){
-    const tache = window.localStorage.getItem(i)
+for (let i = 0 ; i <= window.localStorage.length ;i++ ){
+    const tache = window.localStorage.getItem(localStorage.key(i))
+    if(!localStorage.key(i)){
+        break
+    }
     if (tache == "") {
         break
     }
@@ -24,6 +27,7 @@ for (let i = 1 ; i <= window.localStorage.length ;i++ ){
     span.textContent = "✖"  
     span.addEventListener("click",()=>{
         deleteTache(li)
+        i = window.localStorage.key(i)
         window.localStorage.removeItem(i)
     })
     div.appendChild(span)
@@ -37,7 +41,6 @@ for (let i = 1 ; i <= window.localStorage.length ;i++ ){
 
 function AjouterTache(){ 
     const tache = document.getElementById("tache").value
-    window.localStorage.setItem(window.localStorage.length + 1,tache)
     if(tache === ""){
         alert("Kttb Chi7aja '-' ")
     }else{ 
@@ -57,8 +60,10 @@ function AjouterTache(){
         span.style.color = "red"
         span.style.cursor = "pointer"
         span.textContent = "✖"  
+        window.localStorage.setItem(window.localStorage.length + 1,tache)
         span.addEventListener("click",()=>{
             deleteTache(li)
+            window.localStorage.removeItem(window.localStorage.length)
         })
         div.appendChild(span)
         li.className = "tache"
@@ -78,6 +83,3 @@ function deleteTache(li){
 }
 
 // By Hamid
-
-
-// window.localStorage.clear()
