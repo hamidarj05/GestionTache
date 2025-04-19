@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion Tache</title>
+    <link rel="stylesheet" href="styel.css">
+    <link rel="stylesheet" href="bootstrap.min.css">
+</head>
+
+<body>
+    <div class="carte mt-4 ">
+        <div class="px-5 pt-4 pb-3">
+            <h3 style="text-align: center;">Gestion des taches</h3>
+            <div style="display: flex;">
+                <input id="tache" type="text" class="form-control me-2" placeholder="Ajouter une nouvelle tache....">
+                <button class="btn btn-success ms-2" onclick="AjouterTache()">Ajouter</button>
+            </div>
+        </div>
+        <ul id="taches"> 
+        </ul>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>

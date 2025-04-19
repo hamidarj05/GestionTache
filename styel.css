@@ -1,0 +1,25 @@
+body{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background-color: rgb(151, 150, 150);
+}
+.carte{
+    background-color: white;
+    width: 500px;
+    border: 2px solid rgb(201, 201, 201);
+    margin: 0 auto;
+    border-radius: 13px; 
+}
+.tache{ 
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-transform: capitalize;
+    border: 1px solid rgb(202, 202, 202);
+    width: 401px;
+    padding: 8px 10px;
+    font-size: 18px;
+    margin-left: 16px;
+    border-radius: 6px; 
+    margin-bottom: 9px;
+    background-color: rgb(247, 247, 247);
+}
