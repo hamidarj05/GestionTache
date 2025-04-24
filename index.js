@@ -41,7 +41,7 @@ for (let i = 0 ; i <= window.localStorage.length ;i++ ){
 
 function AjouterTache(){ 
     const tache = document.getElementById("tache").value
-    if(tache === ""){
+    if(tache.trim() === ""){
         alert("Kttb Chi7aja '-' ")
     }else{ 
         const li = document.createElement("li")  
