@@ -26,9 +26,10 @@ for (let i = 0 ; i <= window.localStorage.length ;i++ ){
     span.style.cursor = "pointer"
     span.textContent = "✖"  
     span.addEventListener("click",()=>{
-        deleteTache(li)
-        i = window.localStorage.key(i)
-        window.localStorage.removeItem(i)
+        if(window.confirm("Wach Mt2akad baghi tmsa7 Tache!!!!")){
+            window.localStorage.removeItem(tache)
+            deleteTache(li)
+        }
     })
     div.appendChild(span)
     li.className = "tache"
@@ -60,11 +61,11 @@ function AjouterTache(){
         span.style.color = "red"
         span.style.cursor = "pointer"
         span.textContent = "✖"  
-        window.localStorage.setItem(window.localStorage.length + 1,tache)
+        window.localStorage.setItem(tache,tache)
         span.addEventListener("click",()=>{
-            deleteTache(li)
             if(window.confirm("Wach Mt2akad baghi tmsa7 Tache!!!!")){
                 window.localStorage.removeItem(tache)
+                deleteTache(li)
             }
         })
         div.appendChild(span)
