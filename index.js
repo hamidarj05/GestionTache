@@ -63,7 +63,9 @@ function AjouterTache(){
         window.localStorage.setItem(window.localStorage.length + 1,tache)
         span.addEventListener("click",()=>{
             deleteTache(li)
-            window.localStorage.removeItem(window.localStorage.length)
+            if(window.confirm("Wach Mt2akad baghi tmsa7 Tache!!!!")){
+                window.localStorage.removeItem(tache)
+            }
         })
         div.appendChild(span)
         li.className = "tache"
